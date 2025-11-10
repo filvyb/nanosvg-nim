@@ -4,3 +4,6 @@ htmldocs/
 nimble.develop
 nimble.paths
 nimbledeps
+examples/test_colors
+examples/example1
+examples/example2

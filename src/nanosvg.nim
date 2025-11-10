@@ -3,6 +3,8 @@
 ## This module provides Nim bindings for the nanosvg library,
 ## a simple single-header SVG parser that outputs cubic bezier shapes.
 ##
+## For rasterizing SVG images to RGBA pixels, see the `nanosvgrast` module.
+##
 ## Example:
 ## ```nim
 ## let image = parseFile("test.svg", "px", 96.0)
@@ -214,6 +216,11 @@ proc duplicate*(path: Path): Path =
 proc isNil*(image: Image): bool =
   ## Check if image failed to parse
   image.handle == nil
+
+proc toPtr*(image: Image): pointer =
+  ## Get the internal pointer for interfacing with C code
+  ## This is used internally by nanosvgrast module
+  cast[pointer](image.handle)
 
 iterator shapes*(image: Image): Shape =
   ## Iterate over all shapes in an image
