@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200" height="100" xmlns="http://www.w3.org/2000/svg">
+  <!-- Basic color (always works) -->
+  <rect x="10" y="10" width="30" height="30" fill="red"/>
+
+  <!-- Extended color (only works with -d:nanosvgAllColors) -->
+  <rect x="50" y="10" width="30" height="30" fill="coral"/>
+
+  <!-- Another extended color -->
+  <circle cx="110" cy="25" r="15" fill="lavender"/>
+</svg>
